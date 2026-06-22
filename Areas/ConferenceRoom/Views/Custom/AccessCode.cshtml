@@ -1,0 +1,38 @@
+﻿@using Sitecore
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+@{
+    var itemId = Sitecore.Context.Item.ID;
+}
+
+    <div class="column-login access-code">
+        <div class="container">
+            <div class="sublayout sublayout__loginForm form-component form-component__loginForm">
+                @using (Html.BeginRouteForm(Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName, FormMethod.Post))
+                {
+                    @Html.Sitecore().FormHandler("Forms", "CheckAccessCode")
+                <label>
+                    <h1>AccessCode</h1><br/>
+                    @Html.TextBox("AccessCode",
+                                null,
+                                new
+                                {
+                                    id = "AccessCode",
+                                    @class = "required",
+                                    @required = "required"
+                                })
+
+                </label>
+
+                    <div class="create-account">
+                        <!--or does this need to be an input type submit?-->
+                        @*<input type="submit" class="button-aiim button-aiim-blue" value="Sign In" />*@
+                        <input class="button button--default-theme" type="submit" value="enter">
+                    </div>
+
+                    <input type="hidden" id="itemId" name="itemId" value="@itemId" />
+                }
+            </div>
+        </div>
+    </div>

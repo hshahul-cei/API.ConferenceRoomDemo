@@ -1,0 +1,41 @@
+﻿@using Sitecore.Mvc
+<!DOCTYPE html>
+<!--[if lt IE 9]><html lang="en-US" class="no-js oldie"> <![endif]-->
+<!--[if IE 9]><html lang="en-US" class="no-js oldie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en-US" class="no-js">
+<link href="~/library/ConferenceRoom/css/custom.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://kit.fontawesome.com/a190867a63.js" crossorigin="anonymous"></script>
+<header class="cd-main-header">
+    <div class="cd-header-top-section">
+        <div class="container">
+            <a class="cd-logo" href="/">
+                <img class="logo-desktop" src="./library/ConferenceRoom/img/site/API-Full-Logo-WHITE.svg" alt="Energy API" width="200px;" height="auto;">
+                <img class="logo-mobile" src="./library/ConferenceRoom/img/site/API-Only-WHITE.svg" alt="Energy API" width="50px;" height="auto;">
+            </a>
+        </div>
+    </div>
+    <!-- Google Tag Manager -->
+    <script>
+    (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5WM624FD');</script>
+    <!-- End Google Tag Manager -->
+</header>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src=" https://www.googletagmanager.com/ns.html?id=GTM-5WM624FD"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    @Html.Sitecore().Placeholder("maincontent")
+</body>
+</html>
+

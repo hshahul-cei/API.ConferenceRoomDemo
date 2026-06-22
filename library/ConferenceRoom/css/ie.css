@@ -1,0 +1,52 @@
+body.push-nav-on .mob-nav-control > span:before, body.push-nav-on .mob-nav-control > span:after {
+	display: none !important; 
+}
+
+body.push-nav-on .mob-nav-control:before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -12px;
+    margin-top: -12px;
+    background: url("../images/api-sprite.png") no-repeat -36px -268px; 
+} 
+
+#main-content .hero-wrapper .caption-wrapper {
+	left: 0; 
+}
+
+#main-content #page-header .page-header-wrapper picture img{
+	-ms-transform:translateX(-50%)!important;
+}
+
+#main-content #page-header .page-header-wrapper h1 {
+	width: 655px;
+	text-align: center;
+	left: 50%;
+	margin-left: -327px;
+	top: 80px; 
+}
+
+
+@media (max-width: 355px) {
+	#main-content .hero-wrapper .caption-wrapper {
+    	top: 10px; 
+	} 
+}
+
+@media (max-width: 800px) {
+	#main-nav-wrapper .social-sharing{
+    	right: 65px; 
+	} 
+}
+
+@media (max-width: 767px) {
+	#main-content #page-header .page-header-wrapper h1 {
+		width: 268px;
+		margin-left: -134px;
+		top: 30px; 
+	}
+}

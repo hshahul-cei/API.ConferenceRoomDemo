@@ -1,0 +1,36 @@
+﻿@using Sitecore.Mvc
+@using Sitecore.Mvc.Presentation
+@model RenderingModel
+
+@{
+    var textAlignmentCss = "info";
+    var rc = Sitecore.Mvc.Presentation.RenderingContext.CurrentOrNull;
+    if (rc != null)
+    {
+        var parms = rc.Rendering.Parameters;
+
+        var alignmentItem = Sitecore.Context.Database.GetItem(parms["Alignment"]);
+        if (alignmentItem != null)
+        {
+            var cssClass = alignmentItem["CssClass"];
+            if (!string.IsNullOrEmpty(cssClass))
+            {
+                textAlignmentCss = cssClass;
+            }
+        }
+    }
+
+    <div class="centered">
+        <div class="@textAlignmentCss">
+            @if (ViewBag.Error != null)
+            {
+                <label>@ViewBag.Error</label>
+            }
+            else
+            {
+                <h1>@Html.Sitecore().Field("Title")</h1>
+                <p>@Html.Sitecore().Field("Description")</p>
+            }
+        </div>
+    </div>
+}
