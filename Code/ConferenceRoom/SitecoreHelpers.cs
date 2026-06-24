@@ -1,5 +1,3 @@
-﻿using Sitecore.ContentSearch;
-using Sitecore.ContentSearch.Linq.Utilities;
 using Sitecore.Data.Fields;
 using System;
 using System.Collections.Generic;
@@ -17,11 +15,8 @@ using Sitecore.Security.Accounts;
 using Sitecore.Security.Authentication;
 using Sitecore.Common;
 using Sitecore.Configuration;
-using Sitecore.ContentSearch.SearchTypes;
 using System.Text.RegularExpressions;
 using Sitecore.SecurityModel;
-using Glass.Mapper.Sc.Web.Mvc;
-using Glass.Mapper.Sc;
 
 namespace API.ConferenceRoom.Code
 {
