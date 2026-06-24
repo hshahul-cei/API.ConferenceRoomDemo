@@ -1,0 +1,42 @@
+@using Sitecore.Mvc
+@model API.ConferenceRoom.Models.LoginViewModel
+
+<div class="column-login access-code">
+    <div class="container">
+        <div class="sublayout sublayout__loginForm form-component form-component__loginForm">
+            @using (Html.BeginRouteForm(Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName, FormMethod.Post))
+            {
+                @Html.Sitecore().FormHandler("Account", "HandleLogin")
+                
+                <div class="form-group">
+                    <label for="AccessCode">
+                        <h1>AccessCode</h1>
+                    </label>
+                    <br/>
+                    @Html.TextBoxFor(m => m.AccessCode, new 
+                    { 
+                        id = "AccessCode", 
+                        @class = "form-control required", 
+                        @required = "required",
+                        placeholder = "Enter Access Code"
+                    })
+                </div>
+
+                <div class="form-group create-account-link" style="margin-top: 15px;">
+                    <a href="@Model.CreateAccountUrl" class="hyperlink">Create New Access Code</a>
+                </div>
+
+                <div class="create-account" style="margin-top: 20px;">
+                    <input class="button button--default-theme" type="submit" value="Login">
+                </div>
+            }
+
+            @if (ViewBag.Error != null)
+            {
+                <div class="alert alert-danger" style="color: red; margin-top: 10px;">
+                    @ViewBag.Error
+                </div>
+            }
+        </div>
+    </div>
+</div>

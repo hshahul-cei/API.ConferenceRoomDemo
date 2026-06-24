@@ -4,8 +4,6 @@ using Sitecore.Mvc.Presentation;
 using System;
 using System.Web.Security;
 using System.Web.Mvc;
-using System.IO;
-using System.Security.Policy;
 
 namespace API.ConferenceRoom.Controllers
 {
@@ -97,7 +95,6 @@ namespace API.ConferenceRoom.Controllers
         public ActionResult CheckAccessCode(String AccessCode, String itemId)
         {
             String pageUrl = null != Request.Url ? Request.Url.ToString() : String.Empty;
-            bool isUserValid = false;
             try
             {
                 bool isValidAccessCode = SitecoreHelpers.ValidateAccessCode(itemId, AccessCode);
@@ -112,7 +109,7 @@ namespace API.ConferenceRoom.Controllers
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return Redirect(String.Format("{0}{1}return=error", pageUrl, pageUrl.Contains("?") ? "&" : "?"));
             }

@@ -33,7 +33,7 @@ namespace API.ConferenceRoom.Code
             }
             catch (Exception ex)
             {
-                Sitecore.Diagnostics.Log.Error("Diesel Oil Matters - An Error Occured while validating the Paywall User Information", ex);
+                Sitecore.Diagnostics.Log.Error("Diesel Oil Matters - An Error Occured while validating the Paywall User Information", ex, typeof(RegistrationData));
             }
 
             return isRegistered;
