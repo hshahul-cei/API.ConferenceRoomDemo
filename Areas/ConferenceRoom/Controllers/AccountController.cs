@@ -25,10 +25,7 @@ namespace API.ConferenceRoom.Controllers
                 }
             }
             
-            if (string.IsNullOrEmpty(model.CreateAccountUrl))
-            {
-                model.CreateAccountUrl = "#"; // Default placeholder
-            }
+            model.CreateAccountUrl = model.CreateAccountUrl ?? "#";
 
             return View("~/Areas/ConferenceRoom/Views/Account/Login.cshtml", model);
         }

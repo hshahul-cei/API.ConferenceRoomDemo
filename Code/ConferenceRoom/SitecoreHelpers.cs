@@ -27,14 +27,13 @@ namespace API.ConferenceRoom.Code
         {
             
             Item currentItem = Context.Database.GetItem(id);
-            string originalAccessCode = currentItem.Fields["AccessCode"].ToString();
+            string originalAccessCode = currentItem?.Fields["AccessCode"]?.ToString() ?? string.Empty;
             string[] accescodes = originalAccessCode.Split(',');
             foreach (string accescodespt in accescodes)
             {
-                if (accescodespt.ToLower().Trim() == accessCode.ToLower().Trim())
+                if (string.Equals(accescodespt.Trim(), accessCode.Trim(), StringComparison.OrdinalIgnoreCase))
                 {
                     return true;
-
                 }
             }
             
