@@ -1,0 +1,78 @@
+{
+  "task_id": 46,
+  "task_name": "Upgrade Project Version",
+  "execution_path": "planner_coder",
+  "complexity_tier": "simple",
+  "requirement_text": "Need to upgrade the project c# code version to C# 6",
+  "generated_at": "2026-09-02T14:42:57.743Z",
+  "requirements": [
+    {
+      "req_id": "R-FULL",
+      "text": "Need to upgrade the project c# code version to C# 6",
+      "status": "uncovered",
+      "covered_by": []
+    }
+  ],
+  "tasks": [
+    {
+      "task_id": "T-001",
+      "name": "Upgrade Project Configuration & Dependencies",
+      "status": "completed",
+      "req_refs": [
+        "REQ-FULL"
+      ],
+      "files_written": [
+        "C:/DARTS-development-environment/sandbox/hshahul/Upgrade Project Version/API.ConferenceRoom.csproj",
+        "C:/DARTS-development-environment/sandbox/hshahul/Upgrade Project Version/packages.config",
+        "C:/DARTS-development-environment/sandbox/hshahul/Upgrade Project Version/web.config",
+        "C:/DARTS-development-environment/sandbox/hshahul/Upgrade Project Version/API.ConferenceRoom.csproj",
+        "C:/DARTS-development-environment/sandbox/hshahul/Upgrade Project Version/packages.config",
+        "C:/DARTS-development-environment/sandbox/hshahul/Upgrade Project Version/web.config",
+        "C:/DARTS-development-environment/sandbox/hshahul/Upgrade Project Version/Areas/ConferenceRoom/Controllers/AccountController.cs",
+        "C:/DARTS-development-environment/sandbox/hshahul/Upgrade Project Version/Code/ConferenceRoom/SitecoreHelpers.cs"
+      ],
+      "module": "PlannerCoder",
+      "feature": "Need to upgrade the project c# code version to C# 6",
+      "validation": {
+        "compiled": true,
+        "spec_alignment": "unchecked"
+      }
+    },
+    {
+      "task_id": "T-002",
+      "name": "Refactor Code to C# 6 Syntax",
+      "status": "completed",
+      "req_refs": [
+        "REQ-FULL"
+      ],
+      "files_written": [
+        "C:/DARTS-development-environment/sandbox/hshahul/Upgrade Project Version/API.ConferenceRoom.csproj",
+        "C:/DARTS-development-environment/sandbox/hshahul/Upgrade Project Version/packages.config",
+        "C:/DARTS-development-environment/sandbox/hshahul/Upgrade Project Version/web.config",
+        "C:/DARTS-development-environment/sandbox/hshahul/Upgrade Project Version/API.ConferenceRoom.csproj",
+        "C:/DARTS-development-environment/sandbox/hshahul/Upgrade Project Version/packages.config",
+        "C:/DARTS-development-environment/sandbox/hshahul/Upgrade Project Version/web.config",
+        "C:/DARTS-development-environment/sandbox/hshahul/Upgrade Project Version/Areas/ConferenceRoom/Controllers/AccountController.cs",
+        "C:/DARTS-development-environment/sandbox/hshahul/Upgrade Project Version/Code/ConferenceRoom/SitecoreHelpers.cs"
+      ],
+      "module": "PlannerCoder",
+      "feature": "Need to upgrade the project c# code version to C# 6",
+      "validation": {
+        "compiled": true,
+        "spec_alignment": "unchecked"
+      }
+    }
+  ],
+  "coverage_summary": {
+    "total_requirements": 1,
+    "covered": 0,
+    "partial": 0,
+    "uncovered": 1,
+    "coverage_pct": 0,
+    "total_tasks": 2,
+    "tasks_completed": 2,
+    "tasks_failed": 0,
+    "files_written": 8,
+    "validation_status": "passed"
+  }
+}
